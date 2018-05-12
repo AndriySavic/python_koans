@@ -20,6 +20,23 @@ def triangle(a, b, c):
     # DELETE 'PASS' AND WRITE THIS CODE
     pass
 
+    s1,s2,s3 =a,b,c
+    sides = [s1,s2,s3]
+
+    l = lambda i: i<0
+    neg = [l(i) for i in sides]
+    if 0 in sides:
+    	raise(TriangleError)
+    elif True in neg:
+    	raise(TriangleError)
+    if sides.count(1)==2 or sides.count(2)==2:
+    	raise(TriangleError)
+
+    if sides.count(s1)==3:
+    	return 'equilateral'
+    if sides.count(s1)==2 or sides.count(s3)==2:
+    	return 'isosceles'
+    return 'scalene'
 # Error class used in part 2.  No need to change this code.
 class TriangleError(Exception):
     pass

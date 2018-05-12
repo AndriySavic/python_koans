@@ -33,8 +33,25 @@ from runner.koan import *
 # Your goal is to write the score method.
 
 def score(dice):
-    # You need to write this method
-    pass
+    pts = 0
+    if type(dice) == None:
+        dice = [0]
+    results = [[dice_number, dice.count(dice_number)] for dice_number in set(dice)]
+    #[[1, 4], [2, 4], [3, 2], [4, 1], [5, 2]]
+    for r in results:
+        if r[1] >= 3 and r[0] == 1:
+            pts += 1000
+        if r[1] >= 3 and r[0] != 1:
+            pts += r[0] * 100
+        if r[1] > 3 and r[0] == 1:
+            pts += (r[1] - 3) * 100
+        if r[1] > 3 and r[0] == 5:
+            pts += (r[1] - 3) * 50
+        if r[1] < 3 and r[0] == 1:
+            pts += r[1] * 100
+        if r[1] < 3 and r[0] == 5:
+            pts += r[1] * 50
+    return pts
 
 class AboutScoringProject(Koan):
     def test_score_of_an_empty_list_is_zero(self):
