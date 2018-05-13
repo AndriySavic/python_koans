@@ -27,6 +27,21 @@ class AboutControlStatements(Koan):
             result = 'default value'
         self.assertEqual('true value', result)
 
+
+
+
+    def test_if_then_elif_else(self):
+        if False:
+            result = 'Dima'
+        elif True:
+            result = 'Andriy'
+        else:
+            result = 'default value'
+        self.assertEqual('Andriy', result)
+
+
+
+
     def test_while_statement(self):
         i = 1
         result = 1

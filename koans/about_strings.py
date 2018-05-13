@@ -87,6 +87,20 @@ world!
         hi += there
         self.assertEqual("Hello, ", original)
 
+
+
+    def test_my_strings(self):
+        string = "Andrey" + "Savic"
+        self.assertEqual("AndreySavic", string)
+        wehave = "Do u know "
+        hi = wehave
+        there = "da way?"
+        hi += there
+        string2 = wehave + there
+        self.assertEqual(hi, string2)
+
+
+
     def test_most_strings_interpret_escape_characters(self):
         string = "\n"
         self.assertEqual('\n', string)

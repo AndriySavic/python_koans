@@ -42,6 +42,25 @@ class AboutSets(Koan):
         self.assertEqual({'MacLeod', 'Wallace'}, scotsmen & warriors)
         self.assertEqual({"Willie","Leonidas"}, scotsmen ^ warriors)
 
+
+
+
+
+    def test_my_set(self):
+    
+        name = {"Andriy", "Ivan", "Dima", "Taras"} 
+        lastname = set(["Savic", "Popovih", "Tehza", "Maloruk"]) 
+        
+        self.assertEqual(True, len(lastname) == len(name)) 
+
+        people = name.union(lastname) 
+        
+        self.assertEqual(8, len(people)) 
+
+
+
+
+
     # ------------------------------------------------------------------
 
     def test_we_can_query_set_membership(self):

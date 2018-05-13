@@ -66,6 +66,26 @@ class AboutStringManipulation(Koan):
         words = ["Now", "is", "the", "time"]
         self.assertEqual("Now is the time", ' '.join(words))
 
+    def test_reverse(self):
+        a = "Савич Андрій Миколайович"
+        self.assertEqual(a[::-1], "чивойалокиМ йірднА чиваС")
+
+
+    def test_andr3(self):
+        string = "Savic Andriy"
+        self.assertEqual(True, isinstance(string, str))  
+        string = 'Savic Andriy'
+        self.assertEqual(True, isinstance(string, str)) 
+
+
+    def test_my_koansstring(self):
+        string = "Koans master is for masters"
+        self.assertEqual("Koans", string[0:5])
+        words = string.split()
+        self.assertListEqual(["Koans", "master", "is", "for", "masters"], words)
+
+
+
     def test_strings_can_change_case(self):
         self.assertEqual("Guido", 'guido'.capitalize())
         self.assertEqual("GUIDO", 'guido'.upper())

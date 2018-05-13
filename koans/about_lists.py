@@ -94,6 +94,13 @@ class AboutLists(Koan):
         # To learn more about this try typing "import this" from the python
         # console... ;)
 
+
+    def test_formatting_list(self):
+        l = [[1, 2, 3], [4, 5], [6], [7, 8, 9]]
+        self.assertEqual(sum(l, []), [1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+
+
     def test_making_queues(self):
         queue = [1, 2]
         queue.append('last')

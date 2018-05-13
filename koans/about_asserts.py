@@ -36,6 +36,18 @@ class AboutAsserts(Koan):
         actual_value = 1 + 1
         self.assertTrue(expected_value == actual_value)
 
+
+
+
+    def test_my_assert_equality(self):
+       
+        exp_value = 56
+        actual_value = 7 * 8
+        self.assertTrue(exp_value == actual_value)
+
+
+
+
     def test_a_better_way_of_asserting_equality(self):
         """
         Some ways of asserting equality are better than others.

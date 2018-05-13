@@ -1,0 +1,128 @@
+
+---1---
+       #about_string_manipulation.py
+#Реверс рядка
+    def test_reverse(self):
+        a = "Савич Андрій Миколайович"
+        self.assertEqual(a[::-1], "чивойалокиМ йірднА чиваС")
+
+
+
+---2---	
+       #about_lists.py       #Форматування СПИСКА
+
+    def test_formatting_list(self):
+        l = [[1, 2, 3], [4, 5], [6], [7, 8, 9]]
+	self.assertEqual(sum(l, []), [1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+
+
+---3---
+       #about_asserts.py
+
+def test_my_assert_equality(self):
+       
+        exp_value = 56
+        act_value = 7 * 8
+        self.assertTrue(exp_value == act_value)
+
+
+
+---4---
+       #about_sets.py
+
+def test_my_set(self):
+    
+        name = {"Andriy", "Ivan", "Dima", "Taras"} 
+        lastname = set(["Savic", "Popovih", "Tehza", "Maloruk"]) 
+        
+        self.assertEqual(True, len(lastname) == len(name)) 
+
+        people = name.union(lastname) 
+        
+        self.assertEqual(8, len(people)) 
+
+
+
+
+---5---
+       #about_control_statements.py
+
+def test_if_then_elif_else(self):
+        if False:
+            result = 'Dima'
+        elif True:
+            result = 'Andriy'
+        else:
+            result = 'default value'
+        self.assertEqual('Andriy', result)
+
+
+
+
+---6---
+       #about_strings.py
+
+def test_my_strings(self):
+    string = "Apple" + "pen"
+    self.assertEqual("Applepen", string)
+    wehave = "Do u know "
+    hi = wehave
+    there = "da way?"
+    hi += there
+    string2= wehave + there
+    self.assertEqual(hi, string2)
+
+
+
+---7---
+	#about_true_and_false.py
+
+def test_true_as_false(self):
+    self.assertEqual('false stuff', self.truth_value([]))
+    self.assertEqual('true stuff', self.truth_value([1]))
+    self.assertEqual('false stuff', self.truth_value(()))
+    self.assertEqual('true stuff', self.truth_value(1))
+    self.assertEqual('false stuff', self.truth_value({}))
+    self.assertEqual('true stuff', self.truth_value({1}))
+
+
+
+---8---
+       #перевірка чи string в є "" --+-- та перевірка чи в string є ''
+		
+def test_andr3(self):
+        string = "Savic Andriy"
+        self.assertEqual(True, isinstance(string, str))  
+        string = 'Savic Andriy'
+        self.assertEqual(True, isinstance(string, str))  
+
+
+
+
+---9---
+       #about_iteration.py
+
+ def test_my_reduce_will_blow_your_mind(self):
+        import functools
+        result = functools.reduce(self.add, [50, 10, 20])
+        self.assertEqual(int, result.__class__)
+        
+        self.assertEqual(80, result)
+
+        result2 = functools.reduce(self.multiply, [2, 3, 4], 2)
+        self.assertEqual(48, result2)
+
+
+
+
+
+---10---
+	#about_string_manipulation.py
+
+def test_my_koansstring(self):
+    string = "Koans master is for masters"
+    self.assertEqual("Koans", string[0:5])
+    words = string.split()
+    self.assertListEqual(["Koans", "master", "is", "for", "masters"], words)
+

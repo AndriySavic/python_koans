@@ -80,6 +80,22 @@ class AboutIteration(Koan):
         self.assertEqual('Clarence', name)
 
 
+
+
+
+    def test_my_reduce_will_blow_your_mind(self):
+        import functools
+        result = functools.reduce(self.add, [50, 10, 20])
+        self.assertEqual(int, result.__class__)
+        
+        self.assertEqual(80, result)
+
+        result2 = functools.reduce(self.multiply, [2, 3, 4], 2)
+        self.assertEqual(48, result2)
+
+
+
+
     # ------------------------------------------------------------------
 
     def add(self,accum,item):
